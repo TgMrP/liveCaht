@@ -25,7 +25,7 @@ const app = express();
 const server = http.Server(app);
 const io = sio(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://192.168.1.113:3000",
   },
 });
 
