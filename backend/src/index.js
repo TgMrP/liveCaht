@@ -41,9 +41,9 @@ app.use(cors);
 const messages = [];
 const users = [];
 
-io.use((socket, next) => {
-  session(socket.request, socket.request.res, next);
-});
+// io.use((socket, next) => {
+//   session(socket.request, socket.request.res, next);
+// });
 
 const updateConnections = () => {
   io.emit("connections", io.engine.clientsCount);
