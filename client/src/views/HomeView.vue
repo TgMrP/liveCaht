@@ -2,7 +2,7 @@
 import { io } from "socket.io-client";
 import { ref, watch, reactive } from "vue";
 
-const socket = io("http://192.168.1.100:3001");
+const socket = io("http://192.168.1.113:3001");
 
 let timeout = ref(null);
 let newMessage = ref(null);
