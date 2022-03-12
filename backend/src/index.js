@@ -12,14 +12,14 @@ const cors = require("./middleware/cors");
 const morgan = require("morgan");
 
 /** DB CONNECT */
-const dbConnect = require("./config/db");
+// const dbConnect = require("./config/db");
 
 /** Session */
-const session = require("./middleware/session")(dbConnect);
+// const session = require("./middleware/session")(dbConnect);
 
 /** Config */
 const config = require("./config");
-const passport = require("./config/passport");
+// const passport = require("./config/passport");
 
 const app = express();
 const server = http.Server(app);
@@ -34,9 +34,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet);
 app.use(cors);
-app.use(session);
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(session);
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 const messages = [];
 const users = [];
